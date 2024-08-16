@@ -59,7 +59,7 @@ public final class Device {
         realDeviceSize = displayInfo.size;
         realDeviceDensity = displayInfo.density;
         deviceRotation = displayInfo.rotation;
-        if (deviceRotation == 1 || deviceRotation == 3)
+        if (deviceRotation == 1 || deviceRotation == 3 || deviceRotation == 2)
             realDeviceSize = new Pair<>(realDeviceSize.second, realDeviceSize.first);
     }
 
@@ -130,7 +130,7 @@ public final class Device {
     private static void setRotationListener() {
         WindowManager.registerRotationWatcher(new IRotationWatcher.Stub() {
             public void onRotationChanged(int rotation) {
-                if ((deviceRotation + rotation) % 2 != 0) {
+                if (1) {
                     deviceSize = new Pair<>(deviceSize.second, deviceSize.first);
                     videoSize = new Pair<>(videoSize.second, videoSize.first);
                 }
