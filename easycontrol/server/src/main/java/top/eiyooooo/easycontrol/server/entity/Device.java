@@ -235,9 +235,9 @@ public final class Device {
 
     public static void rotateDevice(int rotation) {
         boolean accelerometerRotation = !WindowManager.isRotationFrozen(displayId);
-        if (rotation == -1) rotation = 2; // 0->1, 1->0, 2->1, 3->0， (getCurrentRotation(displayId) & 1) ^ 1
+        if (rotation == -1) rotation = 2 * ((getCurrentRotation(displayId) & 2) ^ 1); // 0->1, 1->0, 2->1, 3->0， 
         WindowManager.freezeRotation(displayId, rotation);
-        //if (accelerometerRotation) WindowManager.thawRotation(displayId);
+        if (accelerometerRotation) WindowManager.thawRotation(displayId);
     }
 
     private static int getCurrentRotation(int displayId) {
