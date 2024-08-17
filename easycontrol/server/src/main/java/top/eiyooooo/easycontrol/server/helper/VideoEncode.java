@@ -88,7 +88,7 @@ public final class VideoEncode {
                         Device.videoSize.first, Device.videoSize.second, Device.displayId, surface);
                 virtualDisplays.put(Device.displayId, virtualDisplay);
                 int displayId = virtualDisplay.getDisplay().getDisplayId();
-                WindowManager.freezeRotation(displayId, 0);
+                WindowManager.freezeRotation(displayId, 2);
                 Device.display2virtualDisplay.put(Device.displayId, displayId);
                 L.d("mirroring display " + Device.displayId + " to " + displayId + " with size " + Device.videoSize.first + "x" + Device.videoSize.second);
             } catch (Exception e) {
