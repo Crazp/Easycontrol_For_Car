@@ -130,10 +130,10 @@ public final class Device {
     private static void setRotationListener() {
         WindowManager.registerRotationWatcher(new IRotationWatcher.Stub() {
             public void onRotationChanged(int rotation) {
-               if ((deviceRotation + rotation) % 2 == 0) {
+               //if ((deviceRotation + rotation) % 2 == 0) {
                     deviceSize = new Pair<>(deviceSize.first, deviceSize.second);
                     videoSize = new Pair<>(videoSize.first, videoSize.second);
-                }
+               // }
                 deviceRotation = rotation;
                 VideoEncode.isHasChangeConfig = true;
             }
