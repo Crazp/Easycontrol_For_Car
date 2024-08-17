@@ -59,7 +59,7 @@ public final class Device {
         realDeviceSize = displayInfo.size;
         realDeviceDensity = displayInfo.density;
         deviceRotation = displayInfo.rotation;
-        if (deviceRotation == 1 || deviceRotation == 3)
+        if (deviceRotation == 1 || deviceRotation == 3 || deviceRotation == 2)
             realDeviceSize = new Pair<>(realDeviceSize.second, realDeviceSize.first);
     }
 
