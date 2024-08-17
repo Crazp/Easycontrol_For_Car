@@ -105,7 +105,8 @@ public final class Device {
         // h264只接受8的倍数，所以需要缩放至最近参数
         minor = minor + 4 & ~7;
         major = major + 4 & ~7;
-        videoSize = isPortrait ? new Pair<>(minor, major) : new Pair<>(major, minor);
+        //videoSize = isPortrait ? new Pair<>(minor, major) : new Pair<>(major, minor);
+        videoSize = new Pair<>(major, minor);
     }
 
     private static String nowClipboardText = "";
