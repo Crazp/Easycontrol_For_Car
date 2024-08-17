@@ -106,7 +106,7 @@ public final class Device {
         minor = minor + 4 & ~7;
         major = major + 4 & ~7;
         //videoSize = isPortrait ? new Pair<>(minor, major) : new Pair<>(major, minor);
-        videoSize = new Pair<>(major, minor);
+        videoSize = new Pair<>(minor, major);
     }
 
     private static String nowClipboardText = "";
