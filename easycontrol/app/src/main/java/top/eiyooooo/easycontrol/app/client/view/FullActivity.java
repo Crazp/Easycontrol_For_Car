@@ -161,7 +161,7 @@ public class FullActivity extends Activity implements SensorEventListener {
       DisplayMetrics metrics = getResources().getDisplayMetrics();
       int orientation;
       if (metrics.widthPixels > metrics.heightPixels) orientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
-      else orientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+      else orientation = ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT;
       setRequestedOrientation(orientation);
       lastOrientation = orientation;
     } else {
