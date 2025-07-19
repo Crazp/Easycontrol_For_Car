@@ -153,6 +153,9 @@ public final class WindowManager {
                 case 1:
                     method.invoke(manager, displayId, rotation);
                     break;
+                case 2:
+                    method.invoke(manager, displayId, rotation);
+                    break;
                 default:
                     if (displayId != 0) {
                         L.e("Secondary display rotation not supported on this device");
