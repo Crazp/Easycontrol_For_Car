@@ -229,6 +229,7 @@ public class SmallView extends ViewOutlineProvider {
     setButtonListener(clientView.controlPacket);
     setKeyEvent(clientView.controlPacket);
     // 显示
+    smallViewParams.screenOrientation = ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT;
     AppData.windowManager.addView(smallView.getRoot(), smallViewParams);
     smallView.textureViewLayout.addView(clientView.textureView, 0);
     clientView.viewAnim(smallView.getRoot(), true, 0, PublicTools.dp2px(40f), null);
