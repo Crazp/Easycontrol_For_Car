@@ -98,6 +98,7 @@ public class SmallView extends ViewOutlineProvider {
             smallViewParams.x = clientView.device.small_free_x = (longEdge - layoutParams.width) / 2;
             smallViewParams.y = clientView.device.small_free_y = (shortEdge - layoutParams.height) / 2;
           }
+          smallViewParams.screenOrientation = ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT;
           AppData.windowManager.updateViewLayout(smallView.getRoot(), smallViewParams);
           checkPosition = true;
           InitPos = true;
