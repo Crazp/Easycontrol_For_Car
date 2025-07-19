@@ -154,7 +154,7 @@ public final class WindowManager {
                     method.invoke(manager, displayId, rotation);
                     break;
                 case 2:
-                    method.invoke(manager, displayId, rotation);
+                    method.invoke(manager, displayId, rotation, "scrcpy#freezeRotation");
                     break;
                 default:
                     if (displayId != 0) {
