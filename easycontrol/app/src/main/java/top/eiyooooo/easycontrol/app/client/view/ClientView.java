@@ -122,9 +122,9 @@ public class ClientView implements TextureView.SurfaceTextureListener {
         }
         if (deviceSize == null) return;
 
-        int rotation = targetRatio > 1 ? 1 : 0;
+        int rotation = targetRatio > 1 ? 2 : 0;
 
-        if (targetRatio > 1) targetRatio = 1 / targetRatio;
+        if (targetRatio > 1) targetRatio = targetRatio;
 
         float ratioChange = targetRatio / ((float) realDeviceSize.first / realDeviceSize.second);
 
